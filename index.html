@@ -96,24 +96,19 @@
 		<section class="section featured" id="featured">
 			<div class="content featured__content">
 				<h2 class="section__title featured__title">Featured project</h2>
-				<p class="featured__proj-name">Travel blog</p>
+				<p class="featured__proj-name"></p>
 				<div class="featured__text">
-					<p >Donec at diam id ante tempus maximus. Aliquam erat volutpat. Proin ornare, 
-					est vel bibendum dictum, est velit varius est, et rhoncus ex urna in tortor. 
-					Aliquam gravida vehicula blandit. </p>
-					<div class="featured__skills">					
-						<ul class="featured__skills__list">
-							<li class="pill">Flex</li>
-							<li class="pill">Animations</li>
-							<li class="pill">Grid</li>
-							<li class="pill">Media queries</li>
-						</ul>
-					</div>
-
 				</div>
-				<a class="btn btn--on-light featured__btn" href="#0">Go to project</a>
-				<img class="featured__img" src="images/travel-blog.jpg" 
-					rel="A camera sat ontop of an old suitcase">
+				<div class="featured__skills">					
+					<ul class="featured__skills__list">
+					</ul>
+				</div>
+
+				<div class="featured__btns">
+					<a class="btn btn--on-light featured__btn featured__btn--repo" href="#0"><i class="fab fa-github"></i> View repo</a>
+					<a class="btn btn--on-light featured__btn featured__btn--proj" href="#0">Go to project</a>
+				</div>
+				<img class="featured__img" src="" alt="">
 			</div>
 		</section>
 
@@ -122,39 +117,11 @@
 			<div class="content projects__content">
 				<h2 class="section__title projects__title">Other projects</h2>
 				<div class="projects__grid">
-					
-
-
-					<!-- Grid project 1 -->
-
-					<div class="projects__grid__item projects__link" tabindex="0">
-							<img class="projects__grid__img" src="images/travel-blog.jpg" alt="">
-							<p class="projects__grid__proj-name">The grid project</p>    
-					</div> 
-
-
-					<div class="projects__grid__item projects__link" tabindex="0">
-						<img class="projects__grid__img" src="images/travel-blog.jpg" alt="">
-						<p class="projects__grid__proj-name">The grid project</p>    
-					</div> 
-
-
-					<div class="projects__grid__item projects__link" tabindex="0">
-						<img class="projects__grid__img" src="images/travel-blog.jpg" alt="">
-						<p class="projects__grid__proj-name">The grid project</p>    
-					</div> 
-					
-
-			
+					<!-- div populated from JSON file -->
 				</div>
-			
-				<a class="btn btn--on-dark projects__btn" href="#0">See More</a>
-
-
-				
-			
+				<!-- With the current number of project, the below button is not needed needed -->
+				<!-- <a class="btn btn--on-dark projects__btn" href="#0">See More</a> -->
 			</div>
-		
 		</section>
 
 
@@ -172,14 +139,17 @@
 				</div>
 				<div class="modal__skills">					
 					<!-- <h4>Skills used</h4> -->
-					<ul>
+					<ul class="modal__skills__list">
 						<li class="pill">Animations</li>
 						<li class="pill">Flex</li>
 						<li class="pill">Grid</li>
 						<li class="pill">Media queries</li>
 					</ul>
 				</div>
-				<a class="modal__link btn btn--on-light modal__tab-true" href="#">Go to project</a>
+				<div class="modal__btns">
+					<a class="btn btn--on-light modal__btn--repo modal__tab-true" href="#0"><i class="fab fa-github"></i> View repo</a>
+					<a class="modal__link btn btn--on-light modal__btn--proj modal__tab-true" href="#">Go to project</a>
+				</div>
 			</div>
 		</section>
 
