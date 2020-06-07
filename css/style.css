@@ -6,6 +6,7 @@
 - combine media queries or set them to same sizes?
 - title for skills?
 - auto populate things 
+-alt text for images
 
 
 
@@ -127,10 +128,12 @@ a {
 	font-size: 0.9em;
 	color: var(--clr-dark);
 	font-weight: var(--fw-bold);
-	padding: .8em 1.4em;
+	padding: .8em 1.2em;
+	margin: 0.5em;
 	border: 2px solid transparent;
 	transition: all 0.3s;
 	border-radius: 24px;
+	display: inline-block;
 }
 
 .btn:hover {
@@ -429,7 +432,7 @@ a {
 
 .featured__content {
 	display: grid;
-	grid-template-columns: 64% 36%;
+	grid-template-columns: 60% 40%;
 	grid-template-rows: repeat(5, auto);
 }
 
@@ -445,7 +448,7 @@ a {
 	padding-top: .3em;
 	padding-bottom: .3em;
 	padding-left: 1.5em;
-	padding-right: calc(3.5em + 36%);
+	padding-right: calc(3.5em + 40%);
 	grid-column: 1 / -1;
 	grid-row: 2 / 3;
 	position: relative;
@@ -457,22 +460,30 @@ a {
 
 .featured__text {
 	grid-column: 1 / 2;
-	grid-row: 3 / 6;
+	grid-row: 3 / 5;
 	padding-right: 2em;
 	text-align: justify;
 	align-self: start;
 }
 
 .featured__skills {
+	grid-column: 1 / 2;
+	grid-row: 5 / 6;
 	text-align: center;
 	padding-bottom: 1em;
 }
 
-.featured__btn {
+.featured__btns {
 	grid-column: 2 / -1;
-	grid-row: 4 / 5;
-	margin-left: auto;
-	margin-top: 2em;
+	grid-row: 4 / 6;
+	align-self: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	/* margin-left: auto; */
+	/* margin-top: 2em; */
 }
 
 .featured__img {
@@ -490,6 +501,7 @@ a {
 
 	.featured__content {
 		grid-template-columns: 55% 45%;
+		grid-template-rows: repeat(6, auto);
 	}
 
 	.featured__proj-name {
@@ -503,9 +515,15 @@ a {
 		padding: 0;
 	}
 
-	.featured__btn {
-		margin-top: 0;
+	.featured__skills {
+		grid-column: 1 / -1;
 		grid-row: 5 / 6;
+	}
+
+	.featured__btns {
+		margin-top: 0;
+		grid-column: 1 / -1;
+		grid-row: 6 / 7;
 	}
 		
 }
@@ -709,9 +727,9 @@ footer svg:hover,
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(3, auto);
+	grid-template-rows: repeat(4, auto);
 	margin: 50px auto;
-	padding: 2em;
+	padding: 2em 1em;
 	width: 80%;
 	max-width: 1100px;
 }
@@ -758,39 +776,34 @@ footer svg:hover,
 .modal__img {
 	grid-column: 1 / 2;
 	grid-row: 2 / 3;
-	padding: 1em 1em 2em 0;
+	padding: 1em 1em 2em;
 }
 
 .modal__text {
 	grid-column: 2 / -1;
-	grid-row: 2 / 3;
+	grid-row: 2 / 4;
 	padding: 0 1em;
 	text-align: justify;
 }
 
 .modal__skills {
 	grid-column: 2 / -1;
-	grid-row: 3 / 4;
+	grid-row: 4 / 5;
 	padding: 0 1em;
 	text-align: center;
-}
-
-
-.modal__link {
-	grid-column: 1 / 2;
-	grid-row: 3 / 4;
-	width: max-content;
-	justify-self: center;
 	align-self: center;
 }
 
-.modal__link:hover {
-	background: var(--clr-light);
-	border: solid 2px var(--clr-accent);
+
+.modal__btns {
+	grid-column: 1 / 2;
+	grid-row: 3 / 5;
+	align-self: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
-
-
-
 
 
 
@@ -799,14 +812,13 @@ footer svg:hover,
 
 	.modal__content {
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: repeat(4, auto);
-		padding: 2em 2em;
+		padding: 2em 1em;
 	}
 	
 	.modal__text {
 		grid-column: 2 / -1;
-		grid-row: 2 / -1;
-		padding: 0;
+		grid-row: 2 / 4;
+		padding: 0 1em 0 0;
 	}
 	
 	.modal__skills {
@@ -815,14 +827,10 @@ footer svg:hover,
 		padding: 0 1em 2em;
 	}
 	
-	
-	.modal__link {
-		grid-column: 1 / 2;
+	.modal__btns {
+		grid-column: 1 / -1;
 		grid-row: 4 / 5;
 	}
-
-
-
 
 }
 
@@ -830,14 +838,10 @@ footer svg:hover,
 
 @media (max-width: 600px) {
 
-
-
 	.modal__content {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(5, auto);
 		margin: 50px auto;
-		padding: 2em 1em;
-
 	}
 
 	.modal__title {
@@ -860,9 +864,10 @@ footer svg:hover,
 	.modal__skills {
 		grid-column: 1 / -1;
 		grid-row: 4 / 5;
+		padding: 0 1em 1em;
 	}
 	
-	.modal__link {
+	.modal__btns {
 		grid-column: 1 / -1;
 		grid-row: 5 / 6;
 	}
