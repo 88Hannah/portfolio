@@ -469,6 +469,7 @@ a {
 	grid-row: 5 / 6;
 	text-align: center;
 	padding-bottom: 1em;
+	padding-right: 2em;
 }
 
 .featured__btns {
@@ -495,7 +496,7 @@ a {
 
 /********** Media Queries for featured grid **********/
 
-@media (max-width: 685px) {
+@media (max-width: 900px) {
 
 	.featured__content {
 		grid-template-columns: 55% 45%;
@@ -516,6 +517,7 @@ a {
 	.featured__skills {
 		grid-column: 1 / -1;
 		grid-row: 5 / 6;
+		padding-right: 0;
 	}
 
 	.featured__btns {
@@ -590,6 +592,7 @@ a {
 	right: .4em;
 	left: .4em;
 	z-index: 2;
+	filter: drop-shadow(4px 4px 4px var(--clr-dark));
 }
 
 .projects__grid__img {
@@ -714,6 +717,7 @@ a {
 	grid-row: 2 / 4;
 	padding: 0 1em;
 	text-align: justify;
+	align-self: center;
 }
 
 .modal__skills {
@@ -766,7 +770,7 @@ a {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
 	.modal__content {
 		grid-template-columns: 1fr;
