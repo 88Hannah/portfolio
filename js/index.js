@@ -5,46 +5,51 @@
 const projects = [
 
     {   id: 0,
-        projectName: 'Test 1',
+        projectName: 'Front end web developer challenges',
         featured: false,
-        image: 'images/travel-blog.jpg',
-		siteLink: 'https://www.google.co.uk',
-		repoLink: 'https://www.bbc.co.uk',
-        projectText: 'sefjnfjsndflnsfld',
-        projectSkills: ['CSS', 'HTML', 'Grid', 'Transitions']
+        image: 'images/front-end-challenges.png',
+        imageGrey: 'images/front-end-challenges-grey.png',
+		siteLink: 'https://frontend-mentor-challenges-dusky.now.sh/',
+		repoLink: 'https://github.com/88Hannah/frontend-mentor-challenges',
+		projectText: `<p>I put this site together to hold all of the mini projects that I have completed on a site called Frontend Mentor. 
+			It started as a simple index page with a numbered list linking to the projects. Since then I’ve spent time making it a project in it’s own right.</p>
+			<p>I used online tutorials to put together the cards for each project which flip to reveal links and read a lot about 3D CSS and perspective in the process. 
+			This is also the first time that I have used media queries for device capabilities. 
+			The functionality of the site changes depending on whether or not the user has the ability to hover with a mouse. </p>
+			`,
+        projectSkills: ['CSS variables', 'Flex', 'Grid', 'Transitions', 'Media queries']
     },
 
-    {   id: 1,
-        projectName: 'Test 2',
-        featured: false,
-        image: 'images/travel-blog.jpg',
-        siteLink: 'https://www.google.co.uk',
-        projectText: 'sefjnfjsndflnsfld',
-        projectSkills: ['CSS', 'HTML', 'Grid']
+	{   id: 1,
+		projectName: 'This portfolio site!',
+        featured: true,
+        image: 'images/portfolio-dark.png',
+        imageGrey: 'images/portfolio-dark.png',
+        repoLink: 'https://github.com/88Hannah/portfolio',
+        projectText: `<p>Creating this portfolio page has shown me how much I have learnt in such a brief amount of time.</p>
+			<p>I’ve used CSS grid in multiple sections and it has been great combining this with various media queries 
+			to make the site responsive and work on all screen sizes.</p>
+			<p>I’ve made parts of the site’s content dynamic so that I can easily change my featured project with a small change to the data array. 
+			The modal is also dynamically populated when the user clicks on a project from the grid.</p>
+			<p>I’ve used the BEM class naming convention which has made it easier for me to see where I can  tidy up the CSS and remove any duplicated code.</p>
+			<p>Finally, for those that use the keyboard to navigate the site I’ve ensured that focus is held within the navigation menu and the pop-up modal 
+			when either are open for a less frustrating user experience.</p>
+			`,
+        projectSkills: ['ES6', 'Responsive', 'Data array']
     },
 
     {   id: 2,
-        projectName: 'Test 3',
-        featured: true,
-        image: 'images/work-01.jpg',
-        siteLink: 'https://www.google.co.uk',
-		projectText: `<p>Donec at diam id ante tempus maximus. Aliquam erat volutpat. Proin ornare, 
-						est vel bibendum dictum, est velit varius est, et rhoncus ex urna in tortor. 
-						Aliquam gravida vehicula blandit.</p>
-						<p>Nunc porta eget velit nec lobortis. Praesent id imperdiet nibh, non dignissim nibh. 
-						Integer in urna quis augue fermentum tristique imperdiet nec ipsum. Sed facilisis 
-						elementum metus in bibendum. Aenean nec urna sed risus pretium aliquam.</p>`,
-        projectSkills: ['CSS', 'HTML', 'Grid', 'Transitions']
-    },
-
-    {   id: 3,
-        projectName: 'Test 4',
+        projectName: 'Reaction game',
         featured: false,
-        image: 'images/travel-blog.jpg',
-		siteLink: 'https://www.google.co.uk',
-		repoLink: 'https://www.bbc.co.uk',
-        projectText: 'sefjnfjsndflnsfld',
-        projectSkills: ['CSS', 'HTML', 'Grid', 'Transitions']
+        image: 'images/reactions.png',
+        imageGrey: 'images/reactions-grey.png',
+		siteLink: 'https://reaction-game.now.sh/',
+		repoLink: 'https://github.com/88Hannah/reaction-game',
+		projectText: `<p>This was the first proper page that I built while learning Javascript. It is a simple game that tests a user’s reaction. 
+			I improved the initial game by adding my own styling and design, making the page responsive and storing and presenting a user’s previous attempts in a results table. 
+			I learnt about styling elements within Javascript and setTimeOut callback functions.</p>
+			`,
+        projectSkills: ['Math objects', 'Media queries', 'CSS variables']
     }
 
 ];
@@ -79,6 +84,12 @@ if (projects[featuredIndex].repoLink) {
 	featuredRepoLink.style.display = 'none';
 }
 
+if (projects[featuredIndex].siteLink) {
+	featuredProjLink.href = projects[featuredIndex].siteLink;
+} else {
+	featuredProjLink.style.display = 'none';
+}
+
 featuredProjLink.href = projects[featuredIndex].siteLink;
 
 const skillsList = projects[featuredIndex].projectSkills;
@@ -101,7 +112,7 @@ projects.forEach(project => {
 	if(!project.featured) {
 		projectGrid.insertAdjacentHTML('beforeend', 
 			`<div class="projects__grid__item projects__link" data-id="${project.id}" tabindex="0">
-			<img class="projects__grid__img" src="${project.image}" alt="${project.projectName}">
+			<img class="projects__grid__img" src="${project.imageGrey}" alt="${project.projectName}">
 			<p class="projects__grid__proj-name">${project.projectName}</p>    
 			</div>`
 		);
@@ -204,7 +215,14 @@ const populateModal = (id) => {
 		modalRepoLink.style.display = 'none';
 	};
 
-	modalProjLink.href = projects[modalID].siteLink;
+	if (projects[modalID].siteLink) {
+		modalProjLink.style.display = 'block';
+		modalProjLink.href = projects[modalID].siteLink;
+	} else {
+		modalProjLink.style.display = 'none';
+	};
+
+	
 };
 
 

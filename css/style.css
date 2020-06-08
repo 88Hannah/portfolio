@@ -5,8 +5,7 @@
 - add in the real projects
 - combine media queries or set them to same sizes?
 - title for skills?
-- auto populate things 
--alt text for images
+
 
 
 
@@ -209,7 +208,6 @@ a {
 	right: 0;
 	left: 50%;
 	z-index: 100;
-	
 	transform: translateX(100%);
 	transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
@@ -585,10 +583,12 @@ a {
 .projects__grid__proj-name {
 	color: var(--clr-light);
 	font-size: var(--fs-h3);
+	font-weight: var(--fw-bold);
 	margin: 0;
 	position: absolute;
 	bottom: .7em;
-	right: .7em;
+	right: .4em;
+	left: .4em;
 	z-index: 2;
 }
 
@@ -606,6 +606,11 @@ a {
 .projects__grid__item:focus:before {
 	z-index: 0;
 } 
+
+/* .projects__grid__item:hover .projects__grid__proj-name,
+.projects__grid__item:focus .projects__grid__proj-name {
+	color: var(--clr-dark);
+} */
 
 .projects__grid__item:hover .projects__grid__img,
 .projects__grid__item:focus .projects__grid__img {
@@ -625,82 +630,6 @@ a {
 
 
 
-/*****************************************************************
-*				 	  Skills section styling 				 	 *
-******************************************************************/
-
-.skills__content__container {
-	background: var(--clr-dark);
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	padding: 1em;
-	border: solid 5px var(--clr-accent);
-}
-
-.skill {
-	width: 110px;
-	height: max-content;
-	padding: 1em;
-}
-
-svg {
-	fill: var(--clr-accent);
-}
-
-
-
-
-/*****************************************************************
-*				 	  	  Footer styling 					 	 *
-******************************************************************/
-
-.footer {
-	background: var(--clr-dark);
-	color: var(--clr-light);
-	text-align: center;
-	padding: 2.5em 0;
-}
-
-.footer__contact {
-	padding: 1em;
-	border: 2px solid transparent;
-}
-
-.footer__contact:hover {
-	color: var(--clr-accent);
-}
-
-.footer__links {
-	list-style: none;
-	display: flex;
-	justify-content: center;
-	padding: 0;
-	margin: 2em 0 0;
-}
-
-.footer__links a {
-	display: block;
-	padding: 10px;
-	border: 2px solid transparent;
-}
-
-footer svg {
-	fill: var(--clr-light);
-}
-
-footer svg:hover,
-.footer__links a:focus svg {
-	fill: var(--clr-accent);
-}
-
-.footer__contact:focus,
-.footer__links a:focus {
-	border: 2px solid var(--clr-accent);
-	outline: none;
-	color: var(--clr-accent);
-}
-
 
 
 /*****************************************************************
@@ -709,7 +638,7 @@ footer svg:hover,
 
 
 .modal {
-	display: none; /*Changed to block for testing of styling!! */
+	display: none;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -719,6 +648,7 @@ footer svg:hover,
 	overflow: auto;
 	background-color: rgb(0, 0, 0);
 	background-color: rgb(0, 0, 0, 0.4);
+	
 }
 
 
@@ -871,15 +801,81 @@ footer svg:hover,
 		grid-column: 1 / -1;
 		grid-row: 5 / 6;
 	}
-
-
-
-
-
-
 }
 
 
 
+/*****************************************************************
+*				 	  Skills section styling 				 	 *
+******************************************************************/
+
+.skills__content__container {
+	background: var(--clr-dark);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 1em;
+	border: solid 5px var(--clr-accent);
+}
+
+.skill {
+	width: 110px;
+	height: max-content;
+	padding: 1em;
+}
+
+svg {
+	fill: var(--clr-accent);
+}
 
 
+
+/*****************************************************************
+*				 	  	  Footer styling 					 	 *
+******************************************************************/
+
+.footer {
+	background: var(--clr-dark);
+	color: var(--clr-light);
+	text-align: center;
+	padding: 1.5em 0;
+}
+
+/* .footer__contact {
+	padding: 1em;
+	border: 2px solid transparent;
+}
+
+.footer__contact:hover {
+	color: var(--clr-accent);
+} */
+
+.footer__links {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	/* margin: 2em 0 0; */
+}
+
+.footer__links a {
+	display: block;
+	padding: 10px;
+	border: 2px solid transparent;
+}
+
+footer svg {
+	fill: var(--clr-light);
+}
+
+footer svg:hover,
+.footer__links a:focus svg {
+	fill: var(--clr-accent);
+}
+
+.footer__contact:focus,
+.footer__links a:focus {
+	border: 2px solid var(--clr-accent);
+	outline: none;
+	color: var(--clr-accent);
+}
