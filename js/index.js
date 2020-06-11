@@ -63,8 +63,29 @@ const projects = [
 					`,
         projectSkills: ['Math objects', 'Media queries', 'CSS variables']
 	},
+
+	{   id: 3,
+        projectName: 'Booking form',
+        featured: false,
+        image: 'images/form.png',
+		siteLink: 'https://hannahsangar-bookingform.now.sh/',
+		repoLink: 'https://github.com/88Hannah/example-form',
+		projectText: `
+						<p>I have created a form to simulate the booking process for a table at a restaurant. 
+							The form uses a variety of input types as well as a select list and text area. 
+							Labels are in place to title the input fields where necessary.
+						</p>
+						<p>Javascript has been used to not only to add additional validation checks, 
+							but also to dynamically set input attributes such as min, max and value, 
+							and finally display a summary of the booking to the user after a successful form submission.
+						</p>
+						<p>Please note that this form is not hooked up to a back end and only simulates the submission process.
+						</p> 
+					`,
+        projectSkills: ['Form', 'Regex', 'Validation', 'ES6']
+	},
 	
-    {   id: 3,
+    {   id: 4,
         projectName: 'Coming soon - Travel site',
         featured: false,
         image: 'images/travel.png',
