@@ -26,7 +26,7 @@ const projects = [
 
 	{   id: 1,
 		projectName: 'This portfolio',
-        featured: true,
+        featured: false,
         image: 'images/portfolio.png',
         repoLink: 'https://github.com/88Hannah/portfolio',
 		projectText: `
@@ -84,8 +84,36 @@ const projects = [
 					`,
         projectSkills: ['Form', 'Regex', 'Validation', 'ES6']
 	},
+
+	{   id: 4,
+        projectName: 'Currency Converter',
+        featured: true,
+        image: 'images/currency-converter.png',
+		siteLink: 'https://currency-converter.88hannah.vercel.app/',
+		repoLink: 'https://github.com/88Hannah/currency-converter',
+		projectText: `
+						<p>In this project I have made use of multiple APIs to access relevant information that is either displayed directly on the site or used in calculations. 
+							The number of API calls made within a session has been minimised by storing the information collected from the calls in a single object.
+						</p> 
+						
+						<p>Due to the asynchronous nature of the API calls I have made use of ES8’s introduction of async/await functions.  
+						</p>
+						
+						<p>The majority of the site’s content is not known until after the API calls are made so ES6 template literals have been used 
+							to build the options in each of the currency lists and also to create the HTML for the country and flags section.  
+						</p>
+						
+						<p>This is also the first project where I have worked with the command line and used node package manager, Webpack and Babel.
+						</p>
+						
+						<p>During this project I gained useful experience working with the command line and using node package manager, Webpack and Babel.
+						</p>
+		
+					`,
+        projectSkills: ['API', 'Async / Await', 'NPM', 'Webpack', 'Babel']
+	},
 	
-    {   id: 4,
+    {   id: 5,
         projectName: 'Coming soon - Travel site',
         featured: false,
         image: 'images/travel.png',
