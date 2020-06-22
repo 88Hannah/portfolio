@@ -349,11 +349,17 @@ const closeModal = () => {
 };
 
 
-// Close the nav when any of the nav links are clicked
+// Close the nav when any of the nav links are selected
 const navLinkClicked = () => {
 	navLinks.forEach(link => {
 		link.addEventListener('click', () => {
 		navToggle('close');
+		});
+		// Space bar is also a way of selecting 
+		link.addEventListener('keydown', event => {
+			if(event.keyCode === 32) {
+				navToggle('close');
+			}
 		})
 	});
 };
@@ -402,8 +408,8 @@ document.addEventListener('keydown', element => {
 
 	if (modalContainer.style.display === 'block') {
 
-		// Close modal when enter is pressed on the close button
-		if (element.target === closeBtn && element.keyCode === 13) {
+		// Close modal when enter or space is pressed on the close button
+		if (element.target === closeBtn && (element.keyCode === 13 || element.keyCode === 32)) {
 			closeModal();
 		};
 
