@@ -114,16 +114,29 @@ const projects = [
 	},
 	
     {   id: 5,
-        projectName: 'Coming soon - Travel site',
+        projectName: 'Travel site',
         featured: false,
-        image: 'images/travel.png',
+		image: 'images/travel.png',
+		siteLink: 'https://hannahsangar-traveladventures.vercel.app/',
+		repoLink: 'https://github.com/88Hannah/travel-website',
 		projectText: `
-						<p>I’m in the process of creating a travel site to document some of the places that we have been. 
-							It will be built using Bootstrap. 
-							Check back later to see the completed site.
+						<p>I have used Bootstrap to create a multipage website to document our travels in early 2020.
 						</p>
+
+						<p>I made good use of their inbuilt classes for navbars, jumbotrons and cards as well as adding some of my own styling.
+						</p>
+						
+						<p>Each country that we visited has a Google Maps embed to show each of our stops and this has been resized appropriately for different screen sizes.
+						</p>
+						
+						<p>The cards used to document each of our travel stops use the order property of flex box and CSS Grid has been utilized to create the galleries of photos.
+						</p>
+						
+						<p>I have also ensured that all the necessary metadata is included for search result summaries and sharing on social media.
+						</p>
+		
 					`,
-        projectSkills: ['Bootstrap']
+        projectSkills: ['Bootstrap', 'Cards', 'Metadata', 'Grid']
     }
 
 ];

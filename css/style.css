@@ -21,7 +21,6 @@
 	--ff-main: 'Roboto', sans-serif;
 
 	/* Font sizes */	
-	font-size: 100%;
 	--fs-large: 1.2rem;
 	--fs-medium: 1.1rem;
 	--fs-small: 1rem;
@@ -44,7 +43,7 @@
 
 /********** 	TEXT 	**********/
 
-body {
+html {
 	font-family: var(--ff-main);
 	font-size: var(--fs-large);
 	background: var(--clr-light);
@@ -350,7 +349,7 @@ a {
 
 @media (max-width: 768px) {
 	
-	body {
+	html {
 		font-size: var(--fs-medium);
 	}
 	
@@ -373,7 +372,7 @@ a {
 
 @media (max-width: 500px) {
 	
-	body {
+	html {
 		font-size: var(--fs-small);
 	}
 	
@@ -433,13 +432,13 @@ a {
 	background: var(--clr-accent);
 	padding-top: .3em;
 	padding-bottom: .3em;
-	padding-left: 1.5em;
-	padding-right: calc(3.5em + 40%);
+	padding-left: 1.5rem;
+	padding-right: calc(3.5rem + 40%);
 	grid-column: 1 / -1;
 	grid-row: 2 / 3;
 	position: relative;
-	right: 1.5em;
-	width: calc(100% + 3em);
+	right: 1.5rem;
+	width: calc(100% + 3rem);
 	margin: 0;
 	align-self: start;
 }
@@ -492,7 +491,7 @@ a {
 	}
 
 	.featured__proj-name {
-		padding-right: calc(3.5em + 45%);
+		padding-right: calc(3.5rem + 45%);
 		margin-top: 1em;
 	}
 
