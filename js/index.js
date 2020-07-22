@@ -137,6 +137,29 @@ const projects = [
 		
 					`,
         projectSkills: ['Bootstrap', 'Cards', 'Metadata', 'Grid']
+	},
+	
+	{   id: 6,
+        projectName: 'Movie Search React App',
+        featured: false,
+		image: 'images/movie-search.png',
+		siteLink: 'https://react-movie-search-app-weld.vercel.app/',
+		repoLink: 'https://github.com/88Hannah/react-movie-search-app',
+		projectText: `
+						<p>This is my first React project which I have recently started learning.
+						</p>
+
+						<p>The project was part of a course that I completed which covered concepts such as JSX, functional and class-based components, state, props and hooks. 
+							Once I completed the course I enhanced the app by refactoring the code, adding conditional rendering and error handling, 
+							improving the responsive layout and adding my own touches to the styling. 
+						</p>
+						
+						<p>I’ve really enjoyed working with React so far and I’m looking forward to starting my next course which is an advanced React course by Bob Ziroll on Scrimba. 
+							I’ll be covering advanced concepts like reusability, optimisation and the Context API as well as third party libraries such as Redux and React Router.
+						</p>
+		
+					`,
+        projectSkills: ['React', 'JSX', 'Components', 'Props', 'State', 'Hooks']
     }
 
 ];
