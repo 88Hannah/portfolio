@@ -3,8 +3,117 @@
  ***************************************************/
 
 const projects = [
+	
+	{   id: 7,
+        projectName: 'Speed Typing React App',
+        featured: false,
+		image: 'images/speed-typing.png',
+		siteLink: 'https://hannahsangar-react-speed-typing.vercel.app/',
+		repoLink: 'https://github.com/88Hannah/react-speed-typing',
+		projectText: `
+						<p>I created this game while completing the Hooks section of my in depth React bootcamp. 
+							I’ve learnt how the introduction of React Hooks has simplified the process of creating components as they have made it possible to access 
+							state and lifecycle methods without having to create class based components.
+						</p>
+						
+						<p>After building the app as part of the course I then added my own enhancements such as the Top Results section. 
+							I did this by refactoring the app into smaller reusable components where I made use of props and ternary statements for conditionally rendering. 
+							Finally I restyled the game where I made use of CSS animations to highlight when a new top score has been achieved.
+						</p>
+					`,
+        projectSkills: ['React', 'Hooks', 'Custom Hooks', 'Controlled Forms']
+    },
 
-    {   id: 0,
+	{   id: 6,
+        projectName: 'Movie Search React App',
+        featured: false,
+		image: 'images/movie-search.png',
+		siteLink: 'https://react-movie-search-app-weld.vercel.app/',
+		repoLink: 'https://github.com/88Hannah/react-movie-search-app',
+		projectText: `
+						<p>This was my first React project which I created during a course which covered concepts such as 
+						JSX, functional and class-based components, state, props and hooks. 
+						Once I completed the course I enhanced the app by refactoring the code, adding conditional rendering and error handling, 
+						improving the responsive layout and adding my own touches to the styling.  
+						</p>
+					`,
+        projectSkills: ['React', 'JSX', 'Components', 'Props', 'State', 'Hooks']
+	},
+	
+    {   id: 5,
+        projectName: 'Travel site',
+        featured: false,
+		image: 'images/travel.png',
+		siteLink: 'https://hannahsangar-traveladventures.vercel.app/',
+		repoLink: 'https://github.com/88Hannah/travel-website',
+		projectText: `
+						<p>I have used Bootstrap to create a multipage website to document our travels in early 2020.
+						</p>
+
+						<p>I made good use of their inbuilt classes for navbars, jumbotrons and cards as well as adding some of my own styling.
+						</p>
+						
+						<p>Each country that we visited has a Google Maps embed to show each of our stops and this has been resized appropriately for different screen sizes.
+						</p>
+						
+						<p>The cards used to document each of our travel stops use the order property of flex box and CSS Grid has been utilized to create the galleries of photos.
+						</p>
+						
+						<p>I have also ensured that all the necessary metadata is included for search result summaries and sharing on social media.
+						</p>
+					`,
+        projectSkills: ['Bootstrap', 'Cards', 'Metadata', 'Grid']
+	},
+	
+	{   id: 4,
+        projectName: 'Currency Converter',
+        featured: true,
+        image: 'images/currency-converter.png',
+		siteLink: 'https://currency-converter.88hannah.vercel.app/',
+		repoLink: 'https://github.com/88Hannah/currency-converter',
+		projectText: `
+						<p>In this project I have made use of multiple APIs to access relevant information that is either displayed directly on the site or used in calculations. 
+							The number of API calls made within a session has been minimised by storing the information collected from the calls in a single object.
+						</p> 
+						
+						<p>Due to the asynchronous nature of the API calls I have made use of ES8’s introduction of async/await functions.  
+						</p>
+						
+						<p>The majority of the site’s content is not known until after the API calls are made so ES6 template literals have been used 
+							to build the options in each of the currency lists and also to create the HTML for the country and flags section.  
+						</p>
+						
+						<p>This is also the first project where I have worked with the command line and used node package manager, Webpack and Babel.
+						</p>
+						
+						<p>During this project I gained useful experience working with the command line and using node package manager, Webpack and Babel.
+						</p>
+					`,
+        projectSkills: ['API', 'Async / Await', 'NPM', 'Webpack', 'Babel']
+	},
+	
+	{   id: 3,
+        projectName: 'Booking form',
+        featured: false,
+        image: 'images/form.png',
+		siteLink: 'https://hannahsangar-bookingform.now.sh/',
+		repoLink: 'https://github.com/88Hannah/example-form',
+		projectText: `
+						<p>I have created a form to simulate the booking process for a table at a restaurant. 
+							The form uses a variety of input types as well as a select list and text area. 
+							Labels are in place to title the input fields where necessary.
+						</p>
+						<p>Javascript has been used to not only to add additional validation checks, 
+							but also to dynamically set input attributes such as min, max and value, 
+							and finally display a summary of the booking to the user after a successful form submission.
+						</p>
+						<p>Please note that this form is not hooked up to a back end and only simulates the submission process.
+						</p> 
+					`,
+        projectSkills: ['Form', 'Regex', 'Validation', 'ES6']
+	},
+
+    {   id: 2,
         projectName: 'Front end web developer challenges',
         featured: false,
         image: 'images/front-end-challenges.png',
@@ -47,7 +156,7 @@ const projects = [
         projectSkills: ['ES6', 'Responsive', 'Data array']
     },
 
-    {   id: 2,
+    {   id: 0,
         projectName: 'Reaction game',
         featured: false,
         image: 'images/reactions.png',
@@ -62,105 +171,7 @@ const projects = [
 						</p>
 					`,
         projectSkills: ['Math objects', 'Media queries', 'CSS variables']
-	},
-
-	{   id: 3,
-        projectName: 'Booking form',
-        featured: false,
-        image: 'images/form.png',
-		siteLink: 'https://hannahsangar-bookingform.now.sh/',
-		repoLink: 'https://github.com/88Hannah/example-form',
-		projectText: `
-						<p>I have created a form to simulate the booking process for a table at a restaurant. 
-							The form uses a variety of input types as well as a select list and text area. 
-							Labels are in place to title the input fields where necessary.
-						</p>
-						<p>Javascript has been used to not only to add additional validation checks, 
-							but also to dynamically set input attributes such as min, max and value, 
-							and finally display a summary of the booking to the user after a successful form submission.
-						</p>
-						<p>Please note that this form is not hooked up to a back end and only simulates the submission process.
-						</p> 
-					`,
-        projectSkills: ['Form', 'Regex', 'Validation', 'ES6']
-	},
-
-	{   id: 4,
-        projectName: 'Currency Converter',
-        featured: true,
-        image: 'images/currency-converter.png',
-		siteLink: 'https://currency-converter.88hannah.vercel.app/',
-		repoLink: 'https://github.com/88Hannah/currency-converter',
-		projectText: `
-						<p>In this project I have made use of multiple APIs to access relevant information that is either displayed directly on the site or used in calculations. 
-							The number of API calls made within a session has been minimised by storing the information collected from the calls in a single object.
-						</p> 
-						
-						<p>Due to the asynchronous nature of the API calls I have made use of ES8’s introduction of async/await functions.  
-						</p>
-						
-						<p>The majority of the site’s content is not known until after the API calls are made so ES6 template literals have been used 
-							to build the options in each of the currency lists and also to create the HTML for the country and flags section.  
-						</p>
-						
-						<p>This is also the first project where I have worked with the command line and used node package manager, Webpack and Babel.
-						</p>
-						
-						<p>During this project I gained useful experience working with the command line and using node package manager, Webpack and Babel.
-						</p>
-		
-					`,
-        projectSkills: ['API', 'Async / Await', 'NPM', 'Webpack', 'Babel']
-	},
-	
-    {   id: 5,
-        projectName: 'Travel site',
-        featured: false,
-		image: 'images/travel.png',
-		siteLink: 'https://hannahsangar-traveladventures.vercel.app/',
-		repoLink: 'https://github.com/88Hannah/travel-website',
-		projectText: `
-						<p>I have used Bootstrap to create a multipage website to document our travels in early 2020.
-						</p>
-
-						<p>I made good use of their inbuilt classes for navbars, jumbotrons and cards as well as adding some of my own styling.
-						</p>
-						
-						<p>Each country that we visited has a Google Maps embed to show each of our stops and this has been resized appropriately for different screen sizes.
-						</p>
-						
-						<p>The cards used to document each of our travel stops use the order property of flex box and CSS Grid has been utilized to create the galleries of photos.
-						</p>
-						
-						<p>I have also ensured that all the necessary metadata is included for search result summaries and sharing on social media.
-						</p>
-		
-					`,
-        projectSkills: ['Bootstrap', 'Cards', 'Metadata', 'Grid']
-	},
-	
-	{   id: 6,
-        projectName: 'Movie Search React App',
-        featured: false,
-		image: 'images/movie-search.png',
-		siteLink: 'https://react-movie-search-app-weld.vercel.app/',
-		repoLink: 'https://github.com/88Hannah/react-movie-search-app',
-		projectText: `
-						<p>This is my first React project which I have recently started learning.
-						</p>
-
-						<p>The project was part of a course that I completed which covered concepts such as JSX, functional and class-based components, state, props and hooks. 
-							Once I completed the course I enhanced the app by refactoring the code, adding conditional rendering and error handling, 
-							improving the responsive layout and adding my own touches to the styling. 
-						</p>
-						
-						<p>I’ve really enjoyed working with React so far and I’m looking forward to starting my next course which is an advanced React course by Bob Ziroll on Scrimba. 
-							I’ll be covering advanced concepts like reusability, optimisation and the Context API as well as third party libraries such as Redux and React Router.
-						</p>
-		
-					`,
-        projectSkills: ['React', 'JSX', 'Components', 'Props', 'State', 'Hooks']
-    }
+	}
 
 ];
 
