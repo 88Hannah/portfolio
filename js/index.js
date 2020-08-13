@@ -4,6 +4,34 @@
 
 const projects = [
 	
+	{   id: 8,
+        projectName: 'Photo Gallery React App',
+        featured: true,
+		image: 'images/photo-gallery.png',
+		siteLink: 'https://hannahsangar-react-photo-gallery.vercel.app/',
+		repoLink: 'https://github.com/88Hannah/react-shopping-basket',
+		projectText: `
+						<p>This was the final project in my React bootcamp. From the beginning of the tutorial I decided to put my own mark on the app by 
+							loading images from my travel site using a JSON file which was beneficial as later on I added additional properties to improve the design and UX.
+						</p>
+
+						<p>This React app has multiple pages which was accomplished using React Router. 
+							The Context API was used to store certain items in global state when they were needed across multiple components. 
+							There were also occasions where the same functionality was being used in more than one location so I created a custom hook to 
+							contain this reusable logic rather than having repeated code.
+						</p>
+
+						<p>I enjoyed adding some additional functionality and styling once I’d completed the course within the bootcamp. 
+							I created a footer component, added buttons to improve the UX and used session storage to keep track of the favourites and basket items.
+						</p>
+
+						<p>Please note that the purpose of this project was to practice using React and not to build an ecommerce site. 
+							The site only mimics the process of purchasing items and does not actually place orders!
+						</p>
+					`,
+        projectSkills: ['React', 'Context API', 'Hooks', 'Custom Hooks', 'React Router', 'Prop Types', 'Session Storage']
+    },
+	
 	{   id: 7,
         projectName: 'Speed Typing React App',
         featured: false,
@@ -67,7 +95,7 @@ const projects = [
 	
 	{   id: 4,
         projectName: 'Currency Converter',
-        featured: true,
+        featured: false,
         image: 'images/currency-converter.png',
 		siteLink: 'https://currency-converter.88hannah.vercel.app/',
 		repoLink: 'https://github.com/88Hannah/currency-converter',
