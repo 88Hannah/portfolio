@@ -4,6 +4,34 @@
 
 const projects = [
 	
+	{   id: 9,
+        projectName: 'Sass exploration',
+        featured: false,
+		image: 'images/sass.png',
+		siteLink: 'https://hannahsangar-sass.vercel.app/',
+		repoLink: 'https://github.com/88Hannah/sass',
+		projectText: `
+						<p>Learning how to use a CSS preprocessor has been on my todo list for a while but I’d been prioritising other skills as I thought that I could get by with my solid understanding of vanilla CSS. 
+							Now that I have seen the power of the Sass preprocessor, and how much simpler it makes certain tasks, I’m glad I’ve finally picked it up.
+						</p>
+						
+						<p>After completing an online Sass course I wanted to experiment with the new ideas that I had learnt so I put together this webpage. 
+							I was already using CSS custom properties so the idea of variables in Sass was familiar to me. However the range of data types that 
+							can be used allows for so much more customisation and I’ve made use of maps on multiple occasions in this project.
+						</p>
+						
+						<p>I was able to use parameters in mixins as there were multiple properties on similar elements that were identical apart from, for example, a colour. 
+							I even had a play around and nested animation keyframes into a mixin.
+						</p>
+
+						<p>Other useful time savers were the flow control rules. I made use of @for and @if. 
+							It was great being able to use the variable value in the calculations, especially combining it with adjust-hue to change the colour. 
+							This allows me to change all the accent colours on the site by only changing one variable.
+						</p>
+					`,
+        projectSkills: ['Sass', 'Mixins', 'Variables', 'Flow Control Rules']
+    },
+	
 	{   id: 8,
         projectName: 'Photo Gallery React App',
         featured: true,
