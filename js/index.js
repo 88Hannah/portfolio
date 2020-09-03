@@ -139,9 +139,6 @@ const projects = [
 							to build the options in each of the currency lists and also to create the HTML for the country and flags section.  
 						</p>
 						
-						<p>This is also the first project where I have worked with the command line and used node package manager, Webpack and Babel.
-						</p>
-						
 						<p>During this project I gained useful experience working with the command line and using node package manager, Webpack and Babel.
 						</p>
 					`,
@@ -159,7 +156,7 @@ const projects = [
 							The form uses a variety of input types as well as a select list and text area. 
 							Labels are in place to title the input fields where necessary.
 						</p>
-						<p>Javascript has been used to not only to add additional validation checks, 
+						<p>Javascript has been used not only to add additional validation checks, 
 							but also to dynamically set input attributes such as min, max and value, 
 							and finally display a summary of the booking to the user after a successful form submission.
 						</p>
